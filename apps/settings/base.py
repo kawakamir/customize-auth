@@ -123,4 +123,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-AUTH_USER_MODEL = "apps.authentication.SuperVisor"
+AUTH_USER_MODEL = "authentication.SuperVisor"
