@@ -59,7 +59,7 @@ class SuperVisorAdmin(BaseUserAdmin):
     add_fieldsets = (
         (None, {
             "classes": ("wide",),
-            "fields": ("email", "last_name", "first_name", "password1", "password2")
+            "fields": ("username", "last_name", "first_name", "password1", "password2")
         }
          ),
     )

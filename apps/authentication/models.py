@@ -39,7 +39,7 @@ class StaffManager(BaseUserManager):
 
 
 class Staff(AbstractBaseUser):
-    id = models.BooleanField(primary_key=True)
+    id = models.BigAutoField(primary_key=True)
     username = models.CharField("username", unique=True, max_length=24)
     last_name = models.CharField("名前　姓（カナ）", max_length=24)
     first_name = models.CharField("名前　名（カナ）", max_length=24)
