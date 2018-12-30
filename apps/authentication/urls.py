@@ -8,5 +8,5 @@ urlpatterns = [
     path("login/", auth_views.LoginView.as_view(
         template_name="authentication/login.html"
     ), name="login"),
-    path("index", views.index, name="index"),
+    path("index", views.diverge, name="index"),
 ]
