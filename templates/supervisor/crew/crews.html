@@ -1,0 +1,29 @@
+{% extend{% extends "supervisor/base.html" %}
+{% load widget_tweaks %}
+{% block title %}クルー一覧{% endblock %}
+{% block main %}
+ <br><h2>クルー一覧画面</h2><br>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">username</th>
+        <th scope="col">名前　姓</th>
+        <th scope="col">名前　名</th>
+        <th scope="col">登録情報編集</th>
+        <th scope="col">休憩時間編集</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for crew in crews %}
+    <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ crew.username }}</td>
+        <td>{{ crew.last_name }}</td>
+        <td>{{ crew.first_name }}</td>
+        <td><a href="" >ユーザー情報</a></td>
+        <td><a href="">編集</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

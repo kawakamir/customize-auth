@@ -1,8 +1,8 @@
-from django.db import models
 from django.contrib.auth.models import (
     BaseUserManager,
     AbstractBaseUser,
 )
+from django.db import models
 from django.utils import timezone
 
 
@@ -90,4 +90,3 @@ class SuperVisor(Staff):
     @property
     def is_staff(self):
         return self.is_admin
-
