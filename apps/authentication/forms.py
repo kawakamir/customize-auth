@@ -1,12 +1,12 @@
 from django import forms
 import zenhan
-from apps.authentication.models import Staff
-from apps.admin.strings import Strings
+from apps.authentication.models import Crew
+from apps.authentication.strings import Strings
 
 
 class CrewRegisterForm(forms.ModelForm):
     class Meta:
-        model = Staff
+        model = Crew
         fields = ("username", "last_name", "first_name")
 
     def clean_username(self):

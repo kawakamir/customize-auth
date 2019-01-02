@@ -21,11 +21,6 @@
         {% render_field form.first_name placeholder="ナオヤ" %}
         <p>{{ form.first_name.errors }}</p>
     </div>
-        <div class="form-group">
-        <label>{{ form.password1.label }}</label><br>
-        {% render_field form.password1 placeholder="ナオヤ" %}
-        <p>{{ form.first_name.errors }}</p>
-    </div>
     <button type="submit" class="btn btn-primary">登録する</button>
 </form><br>
 {% endblock %}

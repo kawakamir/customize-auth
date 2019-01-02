@@ -1,0 +1,33 @@
+{% extends "supervisor/base.html" %}
+{% load widget_tweaks %}
+{% block title %}クルーの登録情報{% endblock %}
+{% block main %}
+<br><h2>クルーの登録情報</h2><br>
+<h3>登録したクルー</h3>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">登録情報</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>username</td>
+        <td>{{ crew.username }}</td>
+    </tr>
+    <tr>
+        <td>名前　姓（カナ）</td>
+        <td>{{ crew.last_name }}</td>
+    </tr>
+    <tr>
+        <td>名前　名（カナ）</td>
+        <td>{{ crew.first_name }}</td>
+    </tr>
+    <tr>
+        <td>初期パスワード</td>
+        <td>{{ raw_password }}</td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}
