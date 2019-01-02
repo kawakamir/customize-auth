@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from apps.authentication.decorators import check_staff_type
-from apps.authentication.models import Crew
+from apps.authentication.models import Crew, SuperVisor
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
 from apps.authentication.forms import CrewRegisterForm
@@ -40,7 +40,7 @@ def register_crew(request):
             "form": form
         }, status=400)
     raw_password = __generate_initial_password()
-    crew = Crew.object.create_user(**union_dict(form.cleaned_data, {"password": raw_password}))
+    crew = SuperVisor.object.create_user(**union_dict(form.cleaned_data, {"password": raw_password}))
     return render(request, "supervisor/crew/register_display.html", {
         "crew": crew,
         "raw_password": raw_password,
