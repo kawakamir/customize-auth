@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "widget_tweaks",
     "apps.authentication",
     "apps.supervisor",
     "apps.crew",
@@ -126,4 +127,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = "authentication.SuperVisor"
-LOGIN_REDIRECT_URL ="authentication:index"
+LOGIN_REDIRECT_URL ="authentication:diverge"

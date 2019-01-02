@@ -10,7 +10,7 @@ from django.urls import reverse as url_reverse
 
 def diverge(request):
     if isinstance(request.user, SuperVisor):
-        return HttpResponseRedirect(url_reverse("supervisor:index"))
+        return HttpResponseRedirect(url_reverse("supervisor:crews"))
 
     if isinstance(request.user, Crew):
         return HttpResponseRedirect(url_reverse("crew:index"))

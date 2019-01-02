@@ -7,16 +7,15 @@
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
-{% include "inc_alearts.html" %}
 <div class="container">
     <h2>管理者画面</h2>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <ul class="nav">
             <li class="nav-item ">
-                <a class="nav-link active" href="{% url 'supervisor:index' %}">Top</a>
+                <a class="nav-link active" href="{% url 'supervisor:crews' %}">Top</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="{% url 'supervisor:register_crew' %}">クルー登録</a>
+                <a class="nav-link active" href="">クルー登録</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="">ログアウト</a>
