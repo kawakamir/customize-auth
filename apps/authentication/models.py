@@ -40,9 +40,9 @@ class StaffManager(BaseUserManager):
 
 class Staff(AbstractBaseUser):
     id = models.BigAutoField(primary_key=True)
-    username = models.CharField("username", unique=True, max_length=24)
-    last_name = models.CharField("名前　姓（カナ）", max_length=24)
-    first_name = models.CharField("名前　名（カナ）", max_length=24)
+    username = models.CharField("username", unique=True, max_length=24, db_index=True)
+    last_name = models.CharField("名前　姓（カナ）", max_length=24, db_index=True)
+    first_name = models.CharField("名前　名（カナ）", max_length=24, db_index=True)
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField("作成日時", default=timezone.now)
     updated_at = models.DateTimeField("更新日時", auto_now=True)

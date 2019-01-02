@@ -1,0 +1,31 @@
+{% extends "supervisor/base.html" %}
+{% load widget_tweaks %}
+{% block title %}クルーの登録{% endblock %}
+{% block main %}
+<br><h2>クルーの登録</h2><br>
+<form action="{% url 'supervisor:register_crew' %}" method="post">
+    {% csrf_token %}
+    <h3>登録情報</h3>
+    <div class="form-group">
+        <label>{{ form.username.label }}</label><br>
+        {% render_field form.username placeholder="yoshida_naoya" %}
+        <p>{{ form.num.errors }}</p>
+    </div>
+    <div class="form-group">
+        <label>{{ form.last_name.label }}</label><br>
+        {% render_field form.last_name placeholder="ヨシダ" %}
+        <p>{{ form.last_name.errors }}</p>
+    </div>
+    <div class="form-group">
+        <label>{{ form.first_name.label }}</label><br>
+        {% render_field form.first_name placeholder="ナオヤ" %}
+        <p>{{ form.first_name.errors }}</p>
+    </div>
+        <div class="form-group">
+        <label>{{ form.password1.label }}</label><br>
+        {% render_field form.password1 placeholder="ナオヤ" %}
+        <p>{{ form.first_name.errors }}</p>
+    </div>
+    <button type="submit" class="btn btn-primary">登録する</button>
+</form><br>
+{% endblock %}

@@ -17,5 +17,6 @@ def diverge(request):
     return HttpResponse("無所属！")
 
 
+
 def index(request):
     return HttpResponse("hello!")
